@@ -42,8 +42,8 @@ def show( ):
 	#boolean false is generaated for all the win and draw condition
 	#boolean true is  generated once all the conditions fail
 #start of the check() functionn block
-def check( ):
-	count=0
+count=0
+def check( count):
 	i=0
 	flag=True
 	#a while loop used to count the number of inputs taken
@@ -92,7 +92,7 @@ def check( ):
 			ex=input("press any key to quit: ")
 			if(ex.isprintable()):
 					flag=False
-		elif(count>=9):
+		elif(count>=8):
 			print("Its a Draw!!")
 			ex=input("press any key to quit: ")
 			if(ex.isprintable()):
@@ -110,11 +110,10 @@ show()
 	#the loop calls the functions defined and is terminated in between if the check() function returns a false 
 while(n<9 and game):
 	takeValue()
-	game=check()
+	game=check(count)
 	if(x==2):
 		x=x-1
 	else:
 		x=x+1
 	n=n+1
 	
-#end of program
